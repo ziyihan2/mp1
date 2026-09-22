@@ -1,5 +1,5 @@
 /* Your JS here. */
-console.log('Hello World!')
+// https://chatgpt.com/share/6ab303b3-c718-83ea-a8ba-5fd998f5c50e
 
 const sec = document.querySelectorAll("section")
 const bar = document.querySelector(".bar")
@@ -41,12 +41,14 @@ function showSlide(){
     });
     page[curslide].classList.add("active")
 }
+
+//forward
 next.addEventListener("click",function() {
     curslide++;
     if(curslide >= page.length) curslide = 0;
     showSlide();
 });
-
+//backward
 prev.addEventListener("click", function() {
     curslide--;
     if(curslide < 0) curslide = page.length-1;
