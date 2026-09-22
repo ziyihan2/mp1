@@ -1,3 +1,25 @@
+<!-- Sticky Navbar
+│
+├── Home
+│   └── vertically centered hero
+│
+├── About
+│   └── 3-column cat information
+│
+├── Gallery
+│   └── 3-slide carousel
+│
+├── Story
+│   └── fixed background image section
+│
+├── Video
+│   └── HTML5 <video>
+│
+├── More
+│   └── button → modal
+│
+└── Footer
+    └── social media icons -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,7 +29,278 @@
         <title>MP1</title>
     </head>
     <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
+        <nav class="bar">
+                <a href="#home" class="logo">
+                    <img src="assets/logo.jpg" alt="Han Bao Logo">
+                    <span>HAN BAO</span>
+                </a>
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a> <!-- HAN BAO Intro, 3 cols -->
+            <a href="#gallery">GALLERY</a> <!-- Carousel -->
+            <a href="#story">STORY</a> <!--fixed background picture + text-->
+            <a href="#video">VIDEO</a> <!--video -->
+            <a href="#more">MORE</a>  <!--Modal-->
+        </nav>
+
+
+<!-- section home -->
+        <section id = "home">
+            <div class="home-content">
+                <h1> Home </h1>
+                <div class="title-line"><span>🍔</span></div>
+                <div class="home-body">
+                <img src = "assets/home1.jpg">
+                
+                <h2>Han Bao</h2>
+                <h3>Professional Napper & Treat Researcher</h3>
+                <p>Welcome to my little corner of the internet. I enjoy naps, snacks,
+                    pooping, and supervising my human.
+                </p>
+                </div>
+            </div>
+        </section>
+
+
+<!-- section about -->
+        <section id = "about">
+            <div class="about-content">
+                
+                <h1>About</h1>
+                <div class="title-line"><span>🍔</span></div>
+            <div class="about-container">
+
+                <div class="about-column">
+                    <div class="about-icon">🐱</div>
+                    <h2>ME-OW</h2>
+                    <p>
+                        Hi! I'm Han Bao, a 5-year-old cat adopted from the Champaign County
+                        Humane Society four years ago. I now spend my days enjoying a very
+                        comfortable life with my human. My favorite toy is Ziyi Han—a giant squeaky toy that makes funny noises whenever I bite her.
+                    </p>
+                </div>
+
+                <div class="about-column">
+                     <div class="about-icon">❤️</div>
+                    <h2>FAVORITES</h2>
+                    <p>
+                        My favorite things are taking long naps, eating treats, watching birds by the window, turning myself into a sofa armrest or a loaf of bread, and finding the coziest spot in the house.
+                    </p>
+                </div>
+
+                <div class="about-column">
+                    <div class="about-icon">⭐</div>
+                    <h2>SKILLS</h2>
+                    <p>
+                        I'm an expert napper, professional food detector, bird-watching
+                        specialist, and full-time supervisor of everything my human does, and a professional fur-shedding machine
+                    </p>
+                </div>
+                </div>
+            </div>
+
+
+
+<!-- section gallery -->
+
+        </section>
+        <section id = "gallery">
+            <div class = "gallery-content">
+                <h1>Gallery</h1>
+                <div class="title-line"><span>🍔</span></div>
+                <div class="carousel">
+                    <button class="carousel-button prev">&#10094;</button>
+                    <div class="slides">
+                        <div class="slide active">
+                            <div class = "slide-item">
+                                <img src="assets/ga1.jpg">
+                                <h2> Dumpling Nap</h2>
+                                <p>Han Bao curling up into a perfectly round little dumpling.</p>
+                            </div>
+                            <div class = "slide-item">
+                                <img src="assets/ga2.jpg">
+                                <h2> Sunshine Snooze</h2>
+                                <p>Han Bao resting his head on a pillow and soaking up the warm sunshine.</p>
+                            </div>
+                            <div class = "slide-item">
+                                <img src="assets/ga3.jpg">
+                                <h2> Pancake Nap</h2>
+                                <p>Han Bao sleeping flat on his belly with his paws stretched out.</p>
+                            </div>
+                        </div>
+
+                        <div class ="slide">
+                            <div class = "slide-item">
+                                <img src="assets/ga4.jpg">
+                                <h2> Dangling Legs</h2>
+                                <p>Han Bao burying his face in the pillow and shutting out the world.</p>
+                            </div>
+                            <div class = "slide-item">
+                                <img src="assets/ga5.jpg">
+                                <h2> Leave Me Alone</h2>
+                                <p>Han Bao burying his face in the pillow and shutting out the world.</p>
+                            </div>
+                            <div class = "slide-item">
+                                <img src="assets/ga6.jpg">
+                                <h2> Lights Off, Please!</h2>
+                                <p>Han Bao covering his eyes with his paws because the light is too bright.</p>
+                            </div>
+                        </div>
+
+                        <div class ="slide">
+                            <div class = "slide-item">
+                                <img src="assets/ga7.jpg">
+                                <h2> Armrest Loaf</h2>
+                                <p>Han Bao turning himself into a loaf of bread on the sofa armrest.</p>
+                            </div>
+                            <div class = "slide-item">
+                                <img src="assets/ga8.jpg">
+                                <h2> Carpet Loaf</h2>
+                                <p>Han Bao loafing on the carpet like a freshly baked little bread roll.</p>
+                            </div>
+                            <div class = "slide-item">
+                                <img src="assets/ga9.jpg">
+                                <h2> Office Chair Loaf</h2>
+                                <p>Han Bao balancing his loaf-shaped body on the armrest of the computer chair.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button class="carousel-button next">&#10095;</button>
+                </div>
+            </div>
+        </section>
+
+
+<!-- section story -->
+        <section id = "story">
+            <div class = "story-content">
+                <h1>Story</h1>
+                <div class="title-line"><span>🍔</span></div>
+                 <p> Before I met Ziyi Han, I briefly lived with another family when I was only a few months old. Then one day, they had to move and, for reasons that were never properly explained to me, I could not go with them. Very suspicious. So I was sent to an animal shelter.
+
+Life there was mostly sleeping, eating, and judging people from inside my cage. Then one day, a shelter worker suddenly picked me up and carried me into a small room. Two humans were waiting there. Naturally, I inspected them carefully. They seemed acceptable, so I allowed them to play with me for a while.<br>
+
+Then I was taken back to my cage. Excuse me? <br><br>
+
+I had no idea what that meeting was supposed to mean. <br><br>
+
+Unfortunately, before I could investigate further, I got sick. For the next few days, my schedule became extremely unpleasant: medicine, injections, more medicine, and absolutely no respect for my personal space. Somehow, I survived this terrible injustice.
+
+A few days later, I was taken out of my cage again. This time, they put me inside a carrier and took me somewhere completely new. And there they were again — the humans from that mysterious little room.
+
+Apparently, I had been adopted.<br><br>
+
+Since then, life has improved dramatically. I have unlimited sleeping locations, regular meals, snacks, windows for bird surveillance, and a human who handles most of my responsibilities for me.<br><br>
+
+These days, my schedule is very demanding: eat, nap, move to another location, nap again, watch some birds, request snacks, supervise Ziyi, and then recover from all that hard work with another nap.<br><br>
+
+I think things worked out pretty well.🐱
+
+            </div>
+        </section>
+
+
+<!-- section video -->
+        <section id = "video">
+            <div class = "video-content">
+                <h1>Video</h1>
+                <div class="title-line"><span>🍔</span></div>
+                <video controls>
+                    <source src = "assets/v1.mp4" type = "video/mp4">
+                </video>
+            </div>
+        </section>
+
+
+<!-- section more -->
+        <section id = "more">
+            <div class = "more-content">
+                <h1>More</h1>
+                <div class="title-line"><span>🍔</span></div>
+                <h2>Want to know more about Han Bao? Click these blind boxes to see the surprise! </h2>
+                <div class="more-grid">
+                    <img 
+                    class = "more-item"
+                    src = "assets/mb.jpg"
+                    data-image = "assets/m1.jpg"
+                    data-title="Filter Queen"
+                    data-description="Han Bao trying out a glamorous beauty filter."
+                    alt="Mystery Box 1">
+
+                    <img 
+                    class = "more-item"
+                    src = "assets/mb.jpg"
+                    data-image = "assets/m2.jpg"
+                    data-title="Rice Ball Bao"
+                    data-description="Han Bao looks so much like a rice ball that I gave him a matching rice ball outfit with a sticker."
+                    alt="Mystery Box 2">
+
+                    <img 
+                    class = "more-item"
+                    src = "assets/mb.jpg"
+                    data-image = "assets/m3.jpg"
+                    data-title="Birthday Gentleman"
+                    data-description=" Han Bao dressed up for his fourth birthday celebration."
+                    alt="Mystery Box 3">
+
+                    <img 
+                    class = "more-item"
+                    src = "assets/mb.jpg"
+                    data-image = "assets/m4.jpg"
+                    data-title="Cockroach Costume"
+                    data-description="A hilarious cockroach costume my friend gave Han Bao for my birthday."
+                    alt="Mystery Box 4">
+
+                    <img 
+                    class = "more-item"
+                    src = "assets/mb.jpg"
+                    data-image = "assets/m5.jpg"
+                    data-title="Board Game Buddy"
+                    data-description="Han Bao joining us for a very serious board game session."
+                    alt="Mystery Box 5">
+
+                    <img 
+                    class = "more-item"
+                    src = "assets/mb.jpg"
+                    data-image = "assets/m6.jpg"
+                    data-title="Sleepy Bread Loaf"
+                    data-description="Han Bao, also known as the loaf of bread, letting out a giant yawn."
+                    alt="Mystery Box 6">
+
+                </div>
+            </div>
+
+             <div id="photoModal" class="modal">
+                <div class="modal-content">
+                    <span id="closeModal">&times;</span>
+                    <img id="modalImage" alt="Han Bao">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                </div>
+            </div>
+        </section>
+
+<!-- section footer -->
+        <footer>
+            <div class="footer-content">
+            <p>© 2026 Han Bao</p>
+
+            <div class="footer-links">
+                <a href="https://github.com/ziyihan2" target="_blank" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <!-- Font Awesome Free v7.3.1, https://fontawesome.com -->
+                        <path d="M216.5 362.5c-66-8-112.5-55.5-112.5-117 0-25 9-52 24-70-6.5-16.5-5.5-51.5 2-66 20-2.5 47 8 63 22.5 19-6 39-9 63.5-9s44.5 3 62.5 8.5c15.5-14 43-24.5 63-22 7 13.5 8 48.5 1.5 65.5 16 19 24.5 44.5 24.5 70.5 0 61.5-46.5 108-113.5 116.5 17 11 28.5 35 28.5 62.5l0 52C323 491.5 335.5 500 350.5 494 441 459.5 512 369 512 257 512 115.5 397 0 255.5 0S0 115.5 0 257c0 111 70.5 203 165.5 237.5 13.5 5 26.5-4 26.5-17.5l0-40c-7 3-16 5-24 5-33 0-52.5-18-66.5-51.5-5.5-13.5-11.5-21.5-23-23-6-.5-8-3-8-6 0-6 10-10.5 20-10.5 14.5 0 27 9 40 27.5 10 14.5 20.5 21 33 21s20.5-4.5 32-16c8.5-8.5 15-16 21-21z"/>
+                    </svg>
+                </a>
+
+                <a href="mailto:ziyihan2@illinois.edu" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path d="M61.4 64C27.5 64 0 91.5 0 125.4 0 126.3 0 127.1 .1 128L0 128 0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-256-.1 0c0-.9 .1-1.7 .1-2.6 0-33.9-27.5-61.4-61.4-61.4L61.4 64zM464 192.3L464 384c0 8.8-7.2 16-16 16L64 400c-8.8 0-16-7.2-16-16l0-191.7 154.8 117.4c31.4 23.9 74.9 23.9 106.4 0L464 192.3zM48 125.4C48 118 54 112 61.4 112l389.2 0c7.4 0 13.4 6 13.4 13.4 0 4.2-2 8.2-5.3 10.7L280.2 271.5c-14.3 10.8-34.1 10.8-48.4 0L53.3 136.1c-3.3-2.5-5.3-6.5-5.3-10.7z"/>
+                    </svg>
+                </a>
+            </div>
+            </div>
+        </footer>
     </body>
 </html>

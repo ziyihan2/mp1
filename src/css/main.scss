@@ -1,1 +1,561 @@
 /* Your SCSS here. */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+$main-color: #582612; //scss feature
+.bar {
+    background-color: $main-color;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
+    padding-right: 15px;
+    position: sticky;
+    top: 0;
+    transition: height 0.3s ease;
+    z-index: 1000;
+}
+.bar a{
+    font-size: 15px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: font-size 0.3s ease, padding 0.3s ease;
+}
+.bar .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-right: auto;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left:20px;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+.bar.resize .logo {
+    font-size: 16px;
+}
+
+.bar.resize .logo img {
+    width: 35px;
+    height: 35px;
+}
+
+//Position Indicator
+.bar a.active{ 
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 15px 15px;
+    border-radius: 10px;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+//Navbar Resizing
+.bar.resize {
+    height:80px;
+}
+.bar.resize a{
+    font-size:13px
+}
+.bar a:hover {
+  color: #C76A35;
+}
+.bar .logo:hover {
+    color: white;
+}
+// sections
+
+//home section
+#home {
+    background-image: url("../assets/bg1.jpg");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    min-height: min(800px, 100vh);
+    padding: 70px 0;
+
+}
+.home-content{
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+}
+.home-content h1{
+    text-align: center;
+    font-family: 'Fredoka One',sans-serif;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color:$main-color;
+    font-size: clamp(32px, 3.2vw, 50px);
+}
+.home-body {
+    width: 100%;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.home-content h1::before {
+    content: "🐾 ";
+}
+.home-content h1::after {
+    content: "🐾 ";
+}
+
+.title-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+// #home h1 {
+//     margin-bottom: 0px;
+// }
+// #home .title-line {
+//     margin-top: 0;
+// }
+.title-line::before,
+.title-line::after {
+    content: "";
+    width: clamp(50px, 10vw, 150px);
+    height: 2px;
+    background-color: $main-color;
+}
+
+.title-line span {
+    font-size: clamp(20px, 3vw, 35px);
+}
+
+.home-content img {
+    width: clamp(160px, 20vw, 280px);
+    height: clamp(160px, 20vw, 280px);
+    object-fit: cover;
+    border-radius: 50%;
+}
+.home-content h2{
+    text-align: center;
+    font-size: clamp(22px, 2.2vw, 30px);
+    //margin-bottom: 40px;
+    color:$main-color;
+}
+
+.home-content h3{
+    text-align: center;
+    font-size: clamp(16px, 1.5vw, 22px);
+    //margin-bottom: 40px;
+    color:$main-color;
+}
+.home-content p{
+    text-align: center;
+    font-size: clamp(14px, 1.2vw, 18px);
+    margin-bottom: 40px;
+    color:$main-color;
+}
+
+//about section
+#about {
+    background-image: url("../assets/bg2.jpg");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    min-height: min(800px, 100vh);
+    padding: 60px 0;
+}
+
+.about-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+.about-container {
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(20px, 5vw, 80px);
+    color: $main-color;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.about-content h1 {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color:$main-color;
+    font-size: clamp(32px, 3.2vw, 50px);
+}
+.about-content h1::before {
+    content: "🐾 ";
+}
+.about-content h1::after {
+    content: "🐾 ";
+}
+.about-icon {
+    font-size: 30px;
+  //margin-bottom: 1px;
+}
+.about-column {
+
+    text-align: center;
+}
+
+.about-column h2 {
+    margin-top: 0;
+    font-size: clamp(18px, 2vw, 30px);
+}
+
+.about-column p {
+    font-size: clamp(16px, 1.3vw, 20px);
+    line-height: 2.0;
+}
+
+//gallery section
+#gallery {
+    background-image: url("../assets/bg3.jpg");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: min(800px, 100vh);
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+
+}
+.carousel {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.carousel-button {
+    position: static;
+    transform: none;
+
+    border: none;
+    background: none;
+
+    color: $main-color;
+    font-size: clamp(35px, 4vw, 70px);
+    cursor: pointer;
+
+    opacity: 0.35;
+    transition: opacity 0.3s ease;
+}
+.carousel-button:hover {
+    opacity: 1;
+}
+
+.gallery-content {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+.gallery-content h1 {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color:$main-color;
+    font-size: clamp(32px, 3.2vw, 50px);
+}
+.gallery-content h1::before {
+    content: "🐾 ";
+}
+.gallery-content h1::after {
+    content: "🐾 ";
+}
+.slide {
+    display: none;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(10px, 2vw, 25px);
+    width: 100%;
+}
+
+.slide.active{
+    display: grid;
+}
+.slide-item{
+    min-width: 0;
+    text-align: center;
+}
+.slide-item img{
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
+    height: auto;
+
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.slide-item h2 {
+    font-size: clamp(16px, 1.8vw, 24px);
+    color:$main-color
+}
+
+.slide-item p {
+    font-size: clamp(12px, 1.2vw, 17px);
+    color:$main-color
+}
+
+//story section
+#story {
+    min-height: min(1000px, 100vh);
+    padding: 60px 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url("../assets/s1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+
+}
+.story-content {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.story-content h1 {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color:white;
+    font-size: 50px;
+}
+.story-content h1::before {
+    content: "🐾 ";
+}
+.story-content h1::after {
+    content: "🐾 ";
+}
+
+.story-content p {
+    font-size: clamp(16px, 1.4vw, 22px);
+    line-height: 1.7;
+    color: white;
+    text-align: left;
+    padding: 0 15px;
+}
+// video section
+#video {
+    background-image: url("../assets/bg4.jpg");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: min(900px, 100vh);
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    
+
+
+}
+.video-content {
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+}
+.video-content video {
+    display: block;
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+  
+}
+.video-content h1 {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color:$main-color;
+    font-size: 50px;
+}
+.video-content h1::before {
+    content: "🐾 ";
+}
+.video-content h1::after {
+    content: "🐾 ";
+}
+
+//more section
+#more {
+    background-image: url("../assets/bg5.jpg");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height:800px;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+
+
+}
+.more-content {
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+}
+.more-content h1 {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color:$main-color;
+    font-size: 50px;
+}
+.more-content h1::before {
+    content: "🐾 ";
+}
+.more-content h1::after {
+    content: "🐾 ";
+}
+.more-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+    margin-top:40px;
+
+}
+
+.more-item{
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.more-item:hover {
+    transform: scale(1.05);
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    overflow-y: auto;
+    
+}
+.more-content h2 {
+    color: $main-color;
+}
+.modal-content {
+    width: 70%;
+    max-width: 650px;
+    background-image: url("../assets/bg2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    color: $main-color;
+}
+
+#modalImage {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+#closeModal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+//section footer
+footer{
+    background-color: $main-color;
+    padding: 30px 0;
+    color: white; 
+}
+.footer-content {
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.footer-links svg {
+    width: 32px;
+    height: 32px;
+    fill: white;
+}
+
+.footer-links a {
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+#home h1,
+#about h1,
+#gallery h1,
+#story h1,
+#video h1,
+#more h1 {
+    font-size: clamp(32px, 3.2vw, 50px);
+    margin-bottom: 0px;
+}
+
+section .title-line {
+    margin-top: 0;
+    margin-bottom: 30px;
+    flex-shrink: 0;
+}
+
